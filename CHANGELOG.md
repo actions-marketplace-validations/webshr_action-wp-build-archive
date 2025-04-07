@@ -2,5 +2,10 @@
 
 All notable changes to this project will be documented in this file, per [the Keep a Changelog standard](http://keepachangelog.com/).
 
+## [0.1.1] - 2025-04-07
+- Fix: Bump Github Actions & default NODE versions
+- Feature: Add flag to opt-out for artifact upload
+- Update README.md
+
 ## [0.1.0] - 2024-08-30
 - Initial release.

@@ -25,6 +25,10 @@ inputs:
     description: 'Name of the zip archive'
     required: false
     default: ${{ github.event.repository.name }}
+  upload-artifact:
+    description: 'Upload the artifact?'
+    required: false
+    default: true
 runs:
   using: 'composite'
   steps:
@@ -45,11 +49,13 @@ runs:
 
     - name: Unzip the archive (prevents double zip problem)
       id: unzip-archive
+      if: ${{ inputs.upload-artifact == 'true' }}
       run: unzip -q ${{ inputs.archive-name }}.zip -d dist-archive
       shell: bash
 
     - name: Upload the archive as an artifact
       id: upload-archive-artifact
+      if: ${{ inputs.upload-artifact == 'true' }}
       uses: actions/upload-artifact@v4
       with:
         name: ${{ inputs.archive-name }}

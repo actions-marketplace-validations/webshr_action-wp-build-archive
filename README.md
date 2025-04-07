@@ -22,9 +22,10 @@ jobs:
         with:
           install-composer: true # optional; defaults to false
           npm-run-build: true # optional; defaults to false
-          node-version: 20 # optional; defaults to '18.x'
+          node-version: 20 # optional; defaults to '20.x'
           retention-days: 5 # optional; defaults to 30
           archive-name: my-plugin # optional; defaults to repository-name
+          upload-artifact: false # optional; defaults to true
 ```
 
 ## Excluding files from the archive
@@ -67,6 +68,7 @@ It is strongly recommended to save sensive credentials as secrets.
 | `node-version`     | no           | `20`        | `18`              | Node version                                  |
 | `retention-days`   | no           | `3`         | `30`              | Number of days to retain the arhive           |
 | `archive-name`     | no           | `my-plugin` | `repository-name` | Name of the zip archive                       |
+| `upload-artifact`  | no           | `false`     | `true`            | Opt-out for artifact upload                   |
 
 ### Credits
 

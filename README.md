@@ -68,7 +68,7 @@ It is strongly recommended to save sensive credentials as secrets.
 | `node-version`     | no           | `20`        | `18`              | Node version                                  |
 | `retention-days`   | no           | `3`         | `30`              | Number of days to retain the arhive           |
 | `archive-name`     | no           | `my-plugin` | `repository-name` | Name of the zip archive                       |
-| `upload-artifact`  | no           | `false`     | `true`            | Opt-out for artifact upload                   |
+| `upload-artifact`  | no           | `true`      | `false`           | Opt-out for artifact upload                   |
 
 ### Credits
 

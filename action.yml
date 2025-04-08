@@ -28,7 +28,7 @@ inputs:
   upload-artifact:
     description: 'Upload the artifact?'
     required: false
-    default: true
+    default: false
 runs:
   using: 'composite'
   steps:

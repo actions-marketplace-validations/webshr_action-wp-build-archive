@@ -64,9 +64,7 @@ It is strongly recommended to save sensive credentials as secrets.
 
 | **Key Name**       | **Required** | **Example** | **Default**       | **Description**                               |
 | ------------------ | ------------ | ----------- | ----------------- | --------------------------------------------- |
-| `install-composer` | no           | `true`      | `false`           | Install composer before generating archive |
-| `composer-dev`     | no           | `true`      | `false`           | Ignore composer dev 
-packages |
+| `install-composer` | no           | `true`      | `false`           | Install composer packages before generating archive |
 | `npm-run-build`    | no           | `true`      | `false`           | Run `npm run build` before generating archive |
 | `node-version`     | no           | `20`        | `18`              | Node version |
 | `retention-days`   | no           | `3`         | `30`              | Number of days to retain the arhive |

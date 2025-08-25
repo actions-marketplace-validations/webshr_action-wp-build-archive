@@ -10,9 +10,9 @@ inputs:
     required: false
     default: 20
   install-composer:
-    description: 'Install Composer?'
+    description: "Install Composer? Use 'true' to install all dependencies, 'no-dev' to exclude dev dependencies, or 'false' to skip."
     required: true
-    default: false
+    default: no-dev
   npm-run-build:
     description: 'Run `npm run build`?'
     required: true

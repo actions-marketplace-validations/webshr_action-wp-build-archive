@@ -17,7 +17,7 @@ wp package install wp-cli/dist-archive-command --allow-root
 echo '✅ Successfully installed dist-archive-command'
 
 # Install Composer if requested
-if [ "$INSTALL_COMPOSER" = "true" ]; then
+if [ "$INSTALL_COMPOSER" = "true" ] || [ "$INSTALL_COMPOSER" = "no-dev" ]; then
   echo "🛠️ Set up composer"
   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
   php composer-setup.php --install-dir=/usr/local/bin --filename=composer
@@ -27,8 +27,13 @@ if [ "$INSTALL_COMPOSER" = "true" ]; then
   # Install Composer dependencies if composer.json exists
   if [ -f "composer.json" ]; then
     echo "📦 Install Composer dependencies"
-    composer install
-    echo '✅ Successfully installed Composer dependencies'
+    if [ "$INSTALL_COMPOSER" = "no-dev" ]; then
+      composer install --no-dev
+      echo '✅ Successfully installed Composer dependencies (no dev)'
+    else
+      composer install
+      echo '✅ Successfully installed Composer dependencies'
+    fi
   fi
 fi
 

@@ -20,7 +20,8 @@ jobs:
       - name: 📦 Build Plugin
         uses: webshr/deploy-wp-update-server@latest
         with:
-          install-composer: true # optional; defaults to false
+          install-composer: true # optional; defaults to no-dev
+          composer-no-dev: true # optional; defaults to false
           npm-run-build: true # optional; defaults to false
           node-version: 20 # optional; defaults to '20.x'
           retention-days: 5 # optional; defaults to 30
@@ -63,12 +64,14 @@ It is strongly recommended to save sensive credentials as secrets.
 
 | **Key Name**       | **Required** | **Example** | **Default**       | **Description**                               |
 | ------------------ | ------------ | ----------- | ----------------- | --------------------------------------------- |
-| `install-composer` | no           | `true`      | `false`           | Install composer before generating archive    |
+| `install-composer` | no           | `true`      | `false`           | Install composer before generating archive |
+| `composer-dev`     | no           | `true`      | `false`           | Ignore composer dev 
+packages |
 | `npm-run-build`    | no           | `true`      | `false`           | Run `npm run build` before generating archive |
-| `node-version`     | no           | `20`        | `18`              | Node version                                  |
-| `retention-days`   | no           | `3`         | `30`              | Number of days to retain the arhive           |
-| `archive-name`     | no           | `my-plugin` | `repository-name` | Name of the zip archive                       |
-| `upload-artifact`  | no           | `true`      | `false`           | Opt-out for artifact upload                   |
+| `node-version`     | no           | `20`        | `18`              | Node version |
+| `retention-days`   | no           | `3`         | `30`              | Number of days to retain the arhive |
+| `archive-name`     | no           | `my-plugin` | `repository-name` | Name of the zip archive |
+| `upload-artifact`  | no           | `true`      | `false`           | Opt-out for artifact upload |
 
 ### Credits
 

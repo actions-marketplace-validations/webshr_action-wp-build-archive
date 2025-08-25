@@ -2,8 +2,11 @@
 
 All notable changes to this project will be documented in this file, per [the Keep a Changelog standard](http://keepachangelog.com/).
 
-## [0.1.2] - 2025-08-25
+## [0.1.3] - 2025-08-25
 - Feature: Add no-dev flag to exclude Composer dev dependencies
+
+## [0.1.2] - 2025-04-08
+- Fix: downgrade upload-artifact action to version v3
 
 ## [0.1.1] - 2025-04-07
 - Fix: Bump Github Actions & default NODE versions
